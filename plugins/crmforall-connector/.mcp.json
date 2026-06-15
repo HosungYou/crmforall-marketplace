@@ -1,0 +1,8 @@
+{
+  "mcpServers": {
+    "crmforall-connector": {
+      "command": "npx",
+      "args": ["-y", "@crmforall/connector"]
+    }
+  }
+}
