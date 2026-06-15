@@ -1,6 +1,12 @@
 # crmforall 플러그인 마켓플레이스
 
+[![도입 약국](https://img.shields.io/endpoint?url=https%3A%2F%2Fcrmforall-console.vercel.app%2Fapi%2Fstats%2Fbadge%3Fmetric%3Dpharmacies)](https://crmforall-console.vercel.app)
+[![누적 발송 캠페인](https://img.shields.io/endpoint?url=https%3A%2F%2Fcrmforall-console.vercel.app%2Fapi%2Fstats%2Fbadge%3Fmetric%3Dcampaigns)](https://crmforall-console.vercel.app)
+[![npm](https://img.shields.io/npm/v/@crmforall/connector?label=connector)](https://www.npmjs.com/package/@crmforall/connector)
+
 크렘포올(반려동물 약국 카카오 CRM)의 Claude Code 플러그인 마켓플레이스입니다.
+
+> 상단 배지는 **실제 도입 수치로 자동 갱신**됩니다(데이터가 없으면 '베타'로 표시 — 가짜 수치를 넣지 않습니다).
 
 ## 설치 (Claude Code)
 
