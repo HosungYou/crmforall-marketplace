@@ -40,9 +40,9 @@ npx @crmforall/connect init --token=<설치토큰> --platform-url=https://crmfor
 
 | 커맨드 | 설명 |
 |---|---|
-| `/crmforall-onboard` | 진단→연결 확인→스키마→필드 매핑을 대화로 진행 |
-| `/crmforall-sync` | 발송 결과 동기화 (`sync_all`) |
-| `/crmforall-doctor` | 연결·권한·스키마 진단 |
+| `/crmforall-connector:onboard` | 진단→연결 확인→스키마→필드 매핑을 대화로 진행 |
+| `/crmforall-connector:sync` | 발송 결과 동기화 (`sync_all`) |
+| `/crmforall-connector:doctor` | 연결·권한·스키마 진단 |
 
 ![AI 온보딩·동기화](./assets/connector-ai.gif)
 
