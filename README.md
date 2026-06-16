@@ -28,11 +28,14 @@ AI로 진단·연결·매핑·실시간 동기화를 진행합니다.
 자격증명이 오가는 단계라 사람이 직접 실행합니다(대화형 마법사):
 
 ```bash
-npx @crmforall/connect init --token=<설치토큰> --platform-url=https://crmforall-console.vercel.app
+npx @crmforall/connect login   # 브라우저 코드 승인 1회 (머신당 1회)
+npx @crmforall/connect init    # 호스트·DB·계정·비밀번호(가림) 입력 → 등록까지 자동
 ```
 
-- `<설치토큰>`: 콘솔 → 운영 → 데이터 연결 → "우리 서버에 DB가 있어요" → 안내 링크에 포함
-- 호스트·DB·계정·비밀번호(가림)를 한 줄씩 입력 → `~/.crmforall/connector.json` 저장
+- 비밀번호는 입력창으로 받아 `~/.crmforall/connector.json`(0600)에만 저장 — 모델에 노출 안 됨.
+- **디바이스 승인은 머신당 1회**: 로그인 직후 신원이 저장돼, DB 연결 전 중단·재시작해도 재승인 없이 이어집니다(resume, 0.1.19+).
+- 전산담당자가 분리됐으면 토큰 경로도 가능: `init --token=<설치토큰> --platform-url=https://crmforall-console.vercel.app` (토큰은 콘솔에서 발급).
+- 터미널 없이 **Claude 세션 안에서** 연결할 수도 있어요: `setup_login` → `setup_database`.
 
 ![연결 마법사](./assets/connector-init.gif)
 
@@ -44,7 +47,11 @@ npx @crmforall/connect init --token=<설치토큰> --platform-url=https://crmfor
 | `/crmforall-connector:sync` | 발송 결과 동기화 (`sync_all`) |
 | `/crmforall-connector:doctor` | 연결·권한·스키마 진단 |
 
+`onboard`는 결정 지점에서 **선택지 카드(AskUserQuestion)**로 물어요 — ① 연결 방법 · ② 과권한 대응 · ③ 매핑 확정 · ④ 다음 단계.
+
 ![AI 온보딩·동기화](./assets/connector-ai.gif)
+
+> 재현 데모: `/crmforall-connector:onboard` → 진단·매핑 → **매핑 확정 선택지 카드** → 고객 규모 요약 → 다음 단계 선택.
 
 ## 보안
 

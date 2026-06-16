@@ -1,7 +1,7 @@
 {
   "name": "crmforall-connector",
   "displayName": "crmforall Connector",
-  "version": "0.1.10",
+  "version": "0.1.11",
   "description": "고객사 DB를 읽기 전용으로 연결해 발송 대상을 계산하는 크렘포올 커넥터. AI로 진단·연결·매핑·실시간 동기화.",
   "author": { "name": "PetCoPharm / crmforall", "url": "https://crmforall-console.vercel.app" },
   "homepage": "https://crmforall-console.vercel.app/docs/dev/connector",
