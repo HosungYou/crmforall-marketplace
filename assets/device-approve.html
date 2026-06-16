@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="ko"><head><meta charset="utf-8">
+<style>
+  :root{ --accent:#2b46d4; --accent-strong:#1f33a8; --accent-soft:#eef0fc;
+    --ink:#1b1a17; --muted:#76726a; --border:#e7e3db; --surface:#fbfaf7; }
+  *{ box-sizing:border-box; margin:0; }
+  html,body{ font-family:"Apple SD Gothic Neo","Noto Sans KR",system-ui,sans-serif; }
+  body{ background:#efece4; padding:34px; display:flex; justify-content:center; }
+  .win{ width:840px; background:#fff; border:1px solid #ddd8cd; border-radius:14px;
+    box-shadow:0 18px 50px rgba(27,26,23,.16); overflow:hidden; }
+  .bar{ display:flex; align-items:center; gap:12px; padding:11px 14px;
+    background:#f4f1ea; border-bottom:1px solid var(--border); }
+  .dots{ display:flex; gap:7px; }
+  .dot{ width:12px; height:12px; border-radius:50%; }
+  .url{ flex:1; background:#fff; border:1px solid var(--border); border-radius:999px;
+    padding:7px 16px; font-size:13px; color:var(--muted); font-family:ui-monospace,Menlo,monospace; }
+  .url b{ color:var(--ink); font-weight:600; }
+  .body{ padding:38px 44px 46px; }
+  h1{ font-size:28px; color:var(--ink); letter-spacing:-.2px; }
+  .desc{ font-size:14.5px; color:var(--muted); margin-top:10px; line-height:1.6; max-width:560px; }
+  .desc code{ font-family:ui-monospace,Menlo,monospace; background:var(--accent-soft);
+    color:var(--accent-strong); padding:1px 6px; border-radius:6px; font-size:13px; }
+  .card{ margin-top:26px; max-width:460px; border:1px solid var(--border);
+    background:var(--surface); border-radius:12px; padding:22px 22px 24px; }
+  .label{ font-size:13px; font-weight:600; color:var(--ink); }
+  .input{ margin-top:9px; width:100%; border:1px solid var(--border); border-radius:8px;
+    background:#fff; box-shadow:0 0 0 3px var(--accent-soft); border-color:var(--accent);
+    font-size:26px; letter-spacing:6px; text-align:center; font-family:ui-monospace,Menlo,monospace;
+    color:var(--ink); padding:14px 10px; }
+  .hint{ font-size:12px; color:var(--muted); margin-top:9px; line-height:1.5; }
+  .btn{ margin-top:18px; width:100%; background:var(--accent); color:#fff; border:0;
+    border-radius:8px; padding:14px; font-size:15.5px; font-weight:600; cursor:pointer; }
+</style></head>
+<body>
+  <div class="win">
+    <div class="bar">
+      <div class="dots"><span class="dot" style="background:#ff5f57"></span>
+        <span class="dot" style="background:#febc2e"></span>
+        <span class="dot" style="background:#28c840"></span></div>
+      <div class="url">🔒 crmforall-console.vercel.app<b>/device?code=D55V-L4LW</b></div>
+    </div>
+    <div class="body">
+      <h1>기기 연결 승인</h1>
+      <p class="desc">터미널의 <code>connect login</code>이 보여준 코드를 확인하고 승인하세요.
+        승인하면 그 기기가 이 계정으로 크렘포올에 연결됩니다.</p>
+      <div class="card">
+        <div class="label">기기 코드</div>
+        <div class="input">D55V-L4LW</div>
+        <p class="hint">터미널에 표시된 코드와 같은지 확인하세요. 모르는 코드면 승인하지 마세요.</p>
+        <button class="btn">이 기기 승인</button>
+      </div>
+    </div>
+  </div>
+</body></html>
